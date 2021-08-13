@@ -1,0 +1,10 @@
+Copiar as pastas do caminho https://github.com/Brauliofritzen/sitedocker para dentro de uma pasta
+Dentro do host Docker e executar as instruçoes abaixo dentro da pasta. 
+
+Criar a imagem a partir do Dockerfile
+
+docker build -t nomeimagem:versão .
+
+Executar a imagem criada acima
+
+docker run -d -i -t -p “80:80” -v ${PWD}/www:/app -v ${PWD}/mysql:/var/lib/mysql nomeimagem:versão
